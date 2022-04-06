@@ -1,4 +1,13 @@
 $("#button-search").on("click", function () {
+  movieSearch();
+});
+$("#input-search").on("keyup", function (e) {
+  if (e.keyCode == 13) {
+    movieSearch();
+  }
+});
+
+function movieSearch() {
   $("#movie-list").html("");
   let keyword = $("#input-search").val();
   $.ajax({
@@ -43,4 +52,4 @@ $("#button-search").on("click", function () {
       }
     },
   });
-});
+}

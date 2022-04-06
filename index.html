@@ -14,6 +14,21 @@
     />
 
     <title>TIA Movie</title>
+    <style>
+      .loader-gif {
+        position: absolute;
+        top: 0px;
+        left: -30px;
+        z-index: -999;
+        height: min-content;
+      }
+
+      @media screen and (max-width: 700px) {
+        .loader-gif {
+          left: 0px;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -61,6 +76,33 @@
       <div class="container-fluid text-white">
         <div class="row bg-dark position-fixed bottom-0 end-0 start-0">
           <p class="text-center mt-2 fw-bold">Copyright : @mpai_belajo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detail Movie</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
